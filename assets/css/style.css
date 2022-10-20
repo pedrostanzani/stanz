@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  background-color: #FAFAFB;
+  background-color: #fbfafa;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-
+  
 /* General styles for <main /> */
 main {
   padding: 0 1rem;
@@ -44,7 +44,8 @@ main {
 }
 
 .items-center {
-  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Header component */
@@ -69,6 +70,10 @@ main {
   margin: 0.5rem 0;
   padding: 1.5rem 0.75rem;
   border-radius: 1rem;
+}
+
+.negrito{
+  font-weight: bold;
 }
 
 .bg-white {
@@ -146,4 +151,36 @@ main {
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
   margin-right: 0.25rem;
+}
+
+/* Menu compositions */
+
+.navbar {
+  position:fixed;
+  left:0;
+  top:0;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  height: 100vh;
+  width: 13rem;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  
+
+}
+
+.components{
+  margin-bottom: 1.3rem;
+  margin-left: 1rem;
+  
+}
+
+.icone{
+  margin-right: 0.5rem;
 }
