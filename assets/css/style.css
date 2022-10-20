@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  background-color: #FAFAFB;
+  background-color: #fbfafa;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-
+  
 /* General styles for <main /> */
 main {
   padding: 0 1rem;
@@ -44,7 +44,9 @@ main {
 }
 
 .items-center {
-  align-items: center;
+  
+  display: flex;
+  justify-content: center;
 }
 
 /* Header component */
@@ -69,6 +71,10 @@ main {
   margin: 0.5rem 0;
   padding: 1.5rem 0.75rem;
   border-radius: 1rem;
+}
+
+.negrito{
+  font-weight: bold;
 }
 
 .bg-white {
@@ -148,6 +154,7 @@ main {
   margin-right: 0.25rem;
 }
 
+<<<<<<< HEAD
 .profile-header {
   display: flex;
 
@@ -165,5 +172,83 @@ main {
   font-size: 1.5rem;
   margin-top:0.75rem;
   margin-bottom:0.75rem;
+  font-weight: 600;}
+=======
+/* Menu compositions */
+
+.navbar {
+  position:fixed;
+  left:0;
+  top:0;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  height: 100vh;
+  width: 13rem;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.candidaturas-card {
+  background-color: #FFF;
+  color: black;
+  margin: 0.75rem 0rem;
+  padding: 1.5rem 0.75rem;
+  border-radius: 1rem;
+
+}
+
+
+.cand-titulo{
+  margin-bottom: 2rem;
   font-weight: 600;
+
+}
+
+.h1-cand{
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.h2-cand{
+  font-size: 1rem;
+}
+
+
+.cand-steps{
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-bottom:2rem;
+  font-weight:400;
+  align-items: center;
+
+}
+
+
+.cand-check{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  justify-content: center;
+  
+
+}
+
+.components{
+  margin-bottom: 1.3rem;
+  margin-left: 1rem;
+  
+}
+
+.icone{
+  margin-right: 0.5rem;
+}
+.cand-write{
+  padding-left: 0.5rem
+>>>>>>> 0c8ce9e66e5d33e8fb8e01b7a63e47513755d401
 }
