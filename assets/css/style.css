@@ -1,0 +1,150 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #FAFAFB;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* General styles for <main /> */
+main {
+  padding: 0 1rem;
+}
+
+.main-head {
+  margin: 2rem 0.25rem;
+}
+
+.page-heading {
+  font-size: 2rem;
+  font-weight: 600;
+
+  margin-bottom: 0.5rem;
+}
+
+/* Flex utility */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Header component */
+.header {
+  padding: 1rem;
+  background-color: #FFF;
+}
+
+.header--profile-picture {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+
+/* Job Card component */
+.job-card {
+  background-color: #FFF;
+  color: #6C727F;
+
+  font-weight: 500;
+
+  margin: 0.5rem 0;
+  padding: 1.5rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.bg-white {
+  background-color: #FFF;
+}
+
+.bg-gray {
+  background-color: #FAFAFB;
+}
+
+.job-card h3 {
+  color: #000;
+  font-weight: 600;
+}
+
+.logo {
+  align-self: baseline;
+
+  width: 3.25rem;
+
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Button component */
+.btn {
+  background-color: #3263E9;
+  color: #FFF;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 1rem;
+}
+
+/* Section component */
+.section {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+
+  margin: 0.75rem 0;
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  margin-bottom: 0.75rem;
+}
+
+
+/* Input component */
+.input {
+  color: #111827;
+  background-color: #FAFAFB;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1rem;
+  font-size: inherit;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+/* Filter badge component */
+
+.filter-badge {
+  font-size: 0.75rem;
+  background-color: #FFF;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  margin-right: 0.25rem;
+}
