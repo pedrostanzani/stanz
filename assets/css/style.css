@@ -154,7 +154,7 @@ main {
   margin-right: 0.25rem;
 }
 
-<<<<<<< HEAD
+
 .profile-header {
   display: flex;
 
@@ -173,7 +173,7 @@ main {
   margin-top:0.75rem;
   margin-bottom:0.75rem;
   font-weight: 600;}
-=======
+
 /* Menu compositions */
 
 .navbar {
@@ -250,5 +250,5 @@ main {
 }
 .cand-write{
   padding-left: 0.5rem
->>>>>>> 0c8ce9e66e5d33e8fb8e01b7a63e47513755d401
+
 }
