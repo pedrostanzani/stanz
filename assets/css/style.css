@@ -147,3 +147,23 @@ main {
   border-radius: 1rem;
   margin-right: 0.25rem;
 }
+
+.profile-header {
+  display: flex;
+
+  align-items: center;
+}
+
+.profile-header-picture {
+  margin-top: 0.8rem;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.user_name{
+  font-size: 1.5rem;
+  margin-top:0.75rem;
+  margin-bottom:0.75rem;
+  font-weight: 600;
+}
