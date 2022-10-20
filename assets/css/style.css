@@ -44,6 +44,7 @@ main {
 }
 
 .items-center {
+  
   display: flex;
   justify-content: center;
 }
@@ -171,6 +172,49 @@ main {
   justify-content: center;
 
   height: 100%;
+}
+
+.candidaturas-card {
+  background-color: #FFF;
+  color: black;
+  margin: 0.75rem 0rem;
+  padding: 1.5rem 0.75rem;
+  border-radius: 1rem;
+
+}
+
+
+.cand-titulo{
+  margin-bottom: 2rem;
+  font-weight: 600;
+
+}
+
+.h1-cand{
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.h2-cand{
+  font-size: 1rem;
+}
+
+
+.cand-steps{
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-bottom:2rem;
+  font-weight:400;
+  align-items: center;
+
+}
+
+
+.cand-check{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  justify-content: center;
   
 
 }
@@ -183,4 +227,7 @@ main {
 
 .icone{
   margin-right: 0.5rem;
+}
+.cand-write{
+  padding-left: 0.5rem
 }
