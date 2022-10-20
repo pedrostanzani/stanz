@@ -18,14 +18,13 @@ main {
   padding: 0 1rem;
 }
 
-.main-head {
-  margin: 2rem 0.25rem;
+.page-heading {
+  margin: 2rem 0;
 }
 
-.page-heading {
+.page-title {
   font-size: 2rem;
   font-weight: 600;
-
   margin-bottom: 0.5rem;
 }
 
