@@ -298,3 +298,7 @@ main {
 a {
   color: inherit;
 }
+
+.sent {
+  background-color: #28965A;
+}
