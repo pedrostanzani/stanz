@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
 
+<body>
   <header class="header row space-between">
-    <img src="./assets/img/icons/menu.svg" alt="Ícone de menu.">
-    <img class="header--profile-picture" src="./assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+    <a class="self-center" href="./pages/menu.html">
+      <img src="./assets/img/icons/menu.svg" alt="Ícone de menu.">
+    </a>
+    <a href="./pages/perfil.html">
+      <img class="header--profile-picture" src="./assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+    </a>
   </header>
 
-    <main>
-      <div class="page-heading">
-        <h1 class="page-title">Bom dia, Pedro</h1>
-      </div>
+  <main>
+    <div class="page-heading">
+      <h1 class="large-heading">Bom dia, Pedro</h1>
+    </div>
 
-        <section class="section">
-            <h2 class="section-heading">Vagas de Estágio</h2>
-    
-            <ul>
-                <li class="job-card bg-gray row">
-                    <img class="logo" src="./assets/img/companyLogo.png" alt="Logo da empresa.">
-                    <div class="column space-between">
-                        <h3>Desenvolvimento de Software</h3>
-                        <p>Giant Steps Capital</p>
-                        <p>Faria Lima, São Paulo</p>
-                    </div>
-                </li>
-    
-                <li class="job-card bg-gray row">
-                    <img class="logo" src="./assets/img/companyLogo.png" alt="Logo da empresa.">
-                    <div class="column space-between">
-                        <h3 class="semi-bold larger">Desenvolvimento de Software</h3>
-                        <p class="medium gray">Giant Steps Capital</p>
-                        <p class="regular gray">Faria Lima, São Paulo</p>
-                    </div>
-                </li>
-            </ul>
-    
-            <a class="link-container" href="./pages/vagas.html">
-              <button class="btn">
-                  <span>Ver mais vagas</span>
-                  <img src="././assets/img/icons/arrow.svg" alt="Arrow icon.">
-              </button>
-            </a>
-    
-        </section>
-    
-        <section class="section">
-            <h2 class="section-heading">Conheça a nossa newsletter!</h2>
-    
-            <input class="input" type="text" placeholder="Seu melhor email..." />
-            
-    
-            <a class="link-container" href="./pages/newsletter.html">
-                <button class="btn">
-                    <span>Assinar</span>
-                    <img src="././assets/img/icons/arrow.svg" alt="Ícone de seta para a direita.">
-                </button>
-              </a>
-        </section>
-    </main>
+    <section class="section">
+      <h2 class="section-heading">Vagas de Estágio</h2>
 
+      <ul>
+        <li class="job-card bg-gray">
+          <a href="./pages/vaga.html" class="row">
+            <img class="logo" src="./assets/img/companyLogo.png" alt="Logo da empresa.">
+            <div class="column space-between">
+              <h3>Desenvolvimento de Software</h3>
+              <p>Giant Steps Capital</p>
+              <p>Faria Lima, São Paulo</p>
+            </div>
+          </a>
+        </li>
 
+        <li class="job-card bg-gray">
+          <a href="./pages/vaga.html" class="row">
+            <img class="logo" src="./assets/img/companyLogo.png" alt="Logo da empresa.">
+            <div class="column space-between">
+              <h3>Desenvolvimento de Software</h3>
+              <p>Giant Steps Capital</p>
+              <p>Faria Lima, São Paulo</p>
+            </div>
+          </a>
+        </li>
+      </ul>
 
+      <a class="btn anchor" href="./pages/vagas.html">
+        <span>Ver mais vagas</span>
+        <img src="./assets/img/icons/arrow.svg" alt="Arrow icon.">
+      </a>
+    </section>
+
+    <section class="section">
+      <h2 class="section-heading">Conheça a nossa newsletter!</h2>
+      <p class="paragraph">Fique por dentro dos assuntos mais relevantes do mercado e consiga o estágio dos seus sonhos.
+      </p>
+
+      <a class="btn anchor" href="./pages/newsletter.html">
+        <span>Assinar</span>
+        <img src="./assets/img/icons/arrow.svg" alt="Arrow icon.">
+      </a>
+    </section>
+  </main>
 </body>
+
 </html>

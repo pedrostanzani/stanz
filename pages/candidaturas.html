@@ -1,103 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Candidaturas</title>
 
-    <link rel="stylesheet" href="./../assets/css/reset.css">
-    <link rel="stylesheet" href="./../assets/css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Candidaturas</title>
+
+  <link rel="stylesheet" href="./../assets/css/reset.css">
+  <link rel="stylesheet" href="./../assets/css/style.css">
 </head>
+
 <body>
 
   <header class="header row space-between">
-    <img src="./../assets/img/icons/menu.svg" alt="Ícone de menu.">
-    <img class="header--profile-picture" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+    <a class="self-center" href="./../pages/menu.html">
+      <img src="./../assets/img/icons/menu.svg" alt="Ícone de menu.">
+    </a>
+    <a href="./../pages/perfil.html">
+      <img class="header--profile-picture" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+    </a>
   </header>
 
-    <main>
-      <div class="page-heading">
-        <h1 class="page-title">Minhas Candidaturas</h1>
-        
-      </div> 
+  <main>
+    <div class="page-heading">
+      <h1 class="page-title">Minhas Candidaturas</h1>
 
-        <ul class="candidaturas-card column flex-start">
-          <li class = 'cand-titulo' >
-              <h1 class = 'h1-cand'>Giant Steps Capital</h1>
-              <h2 class = 'h2-cand'>Desenvolvimento de Software</h2>
-          </li>
+    </div>
 
-          
-          <li class = 'row flex-start cand-steps'>
-            <img class="cand-check" src="./../assets/img/icons/check.svg"  alt="Foto de perfil do usuário.">
-            <p class = 'cand-write'>Currículo Enviado</p>
-
-          </li>
-
-          <li class = 'row flex-start cand-steps'>
-            <img class="cand-check" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
-            <p class = 'cand-write'>Aguardando análise</p>
-
-          </li>
-
-          <li class = 'row flex-start cand-steps'>
-            <img class="cand-check" src="./../assets/img/profilePicture.png"alt="Foto de perfil do usuário.">
-            <p class = 'cand-write'>Aguardando agendamento</p>
-
-          </li>
-          <li>
-            <a class="link-container" href="./pages/vagas.html">
-                <button class="btn">
-                    <p>Ver mais</p>
-                    <img src="./../assets/img/icons/arrow.svg" alt="Arrow icon.">
-                </button>
-              </a>
-          </li>
+    <ul class="candidaturas-card column flex-start">
+      <li class='cand-titulo'>
+        <h1 class='h1-cand'>Giant Steps Capital</h1>
+        <h2 class='h2-cand'>Desenvolvimento de Software</h2>
+      </li>
 
 
-        
-        </ul>
+      <li class='row flex-start cand-steps'>
+        <img class="cand-check" src="./../assets/img/icons/check.svg" alt="Foto de perfil do usuário.">
+        <p class='cand-write'>Currículo Enviado</p>
 
-        <ul class="candidaturas-card column flex-start">
-            <li class = 'cand-titulo' >
-                <h1 class = 'h1-cand'>BTG Pactual</h1>
-                <h2 class = 'h2-cand'>Desenvolvimento Front-end</h2>
-            </li>
-  
-            
-            <li class = 'row flex-start cand-steps'>
-              <img class="cand-check" src="./../assets/img/icons/check.svg" alt="Foto de perfil do usuário.">
-              <p class = 'cand-write'>Currículo Enviado</p>
-  
-            </li>
-  
-            <li class = 'row flex-start cand-steps'>
-              <img class="cand-check" src="./../assets/img/icons/check.svg"  alt="Foto de perfil do usuário.">
-              <p class = 'cand-write'>Currículo aprovado</p>
-  
-            </li>
-  
-            <li class = 'row flex-start cand-steps'>
-              <img class="cand-check" src="./../assets/img/icons/check.svg"  alt="Foto de perfil do usuário.">
-              <p class = 'cand-write'>Entrevista agendada(18/10, 19h)</p>
-  
-            </li>
-            <li>
-              <a class="link-container" href="./pages/vagas.html">
-                  <button class="btn">
-                      <p>Ver mais</p>
-                      <img src="./../assets/img/icons/arrow.svg" alt="Arrow icon.">
-                  </button>
-                </a>
-            </li>
-  
-  
-          
-          </ul>
-    </main>
+      </li>
+
+      <li class='row flex-start cand-steps'>
+        <img class="cand-check" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+        <p class='cand-write'>Aguardando análise</p>
+
+      </li>
+
+      <li class='row flex-start cand-steps'>
+        <img class="cand-check" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+        <p class='cand-write'>Aguardando agendamento</p>
+
+      </li>
+      <li>
+        <a class="btn anchor" href="#">
+          <span>Ver mais vagas</span>
+          <img src="./../assets/img/icons/arrow.svg" alt="Arrow icon.">
+        </a>
+      </li>
+    </ul>
+
+    <ul class="candidaturas-card column flex-start">
+      <li class='cand-titulo'>
+        <h1 class='h1-cand'>BTG Pactual</h1>
+        <h2 class='h2-cand'>Desenvolvimento Front-end</h2>
+      </li>
+
+
+      <li class='row flex-start cand-steps'>
+        <img class="cand-check" src="./../assets/img/icons/check.svg" alt="Foto de perfil do usuário.">
+        <p class='cand-write'>Currículo Enviado</p>
+
+      </li>
+
+      <li class='row flex-start cand-steps'>
+        <img class="cand-check" src="./../assets/img/icons/check.svg" alt="Foto de perfil do usuário.">
+        <p class='cand-write'>Currículo aprovado</p>
+
+      </li>
+
+      <li class='row flex-start cand-steps'>
+        <img class="cand-check" src="./../assets/img/icons/check.svg" alt="Foto de perfil do usuário.">
+        <p class='cand-write'>Entrevista agendada(18/10, 19h)</p>
+
+      </li>
+      <li>
+        <a class="btn anchor" href="#">
+          <span>Ver mais vagas</span>
+          <img src="./../assets/img/icons/arrow.svg" alt="Arrow icon.">
+        </a>
+      </li>
+
+
+
+    </ul>
+  </main>
 
 
 
 </body>
+
 </html>

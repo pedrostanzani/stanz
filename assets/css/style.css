@@ -18,6 +18,26 @@ main {
   padding: 0 1rem;
 }
 
+.semi-bold {
+  font-weight: 600;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .page-heading {
   margin: 2rem 0;
 }
@@ -44,9 +64,11 @@ main {
 }
 
 .items-center {
-  
-  display: flex;
-  justify-content: center;
+  align-items: center;
+}
+
+.self-center {
+  align-self: center;
 }
 
 /* Header component */
@@ -61,6 +83,28 @@ main {
   border-radius: 50%;
 }
 
+/* Heading components */
+.large-heading {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.medium-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  margin-bottom: 0.75rem;
+}
+
+.card-heading {
+  font-weight: 600;
+}
+
 /* Job Card component */
 .job-card {
   background-color: #FFF;
@@ -71,14 +115,6 @@ main {
   margin: 0.5rem 0;
   padding: 1.5rem 0.75rem;
   border-radius: 1rem;
-}
-
-.negrito{
-  font-weight: bold;
-}
-
-.bg-white {
-  background-color: #FFF;
 }
 
 .bg-gray {
@@ -99,20 +135,10 @@ main {
   border-radius: 0.25rem;
 }
 
-/* Button component */
-.btn {
-  background-color: #3263E9;
-  color: #FFF;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  width: 100%;
-
-  margin: 0.5rem 0;
-  padding: 0.75rem;
-  border-radius: 1rem;
+/* Paragraph component */
+.paragraph {
+  font-size: 0.75rem;
+  line-height: 1.25;
 }
 
 /* Section component */
@@ -124,28 +150,21 @@ main {
   margin: 0.75rem 0;
 }
 
-.section-heading {
-  font-size: 1.25rem;
-  font-weight: 600;
-
-  margin-bottom: 0.75rem;
-}
-
-
 /* Input component */
 .input {
   color: #111827;
-  background-color: #FAFAFB;
+  background-color: #FFF;
   box-sizing: border-box;
   border: none;
   border-radius: 1rem;
   font-size: inherit;
   padding: 0.75rem;
   width: 100%;
+
+  margin-bottom: 0.75rem;
 }
 
 /* Filter badge component */
-
 .filter-badge {
   font-size: 0.75rem;
   background-color: #FFF;
@@ -229,20 +248,11 @@ main {
 
 }
 
-
 .cand-check{
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   justify-content: center;
-  
-
-}
-
-.components{
-  margin-bottom: 1.3rem;
-  margin-left: 1rem;
-  
 }
 
 .icone{
@@ -251,4 +261,40 @@ main {
 .cand-write{
   padding-left: 0.5rem
 
+}
+
+.listing-header {
+  margin-top: 2rem;
+}
+
+.listing-details {
+  margin-top: 0.5rem;
+}
+
+.listing-logo {
+  width: 3.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+
+  align-self: baseline;
+}
+
+.anchor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Button component */
+.btn {
+  background-color: #3263E9;
+  color: #FFF;
+
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 1rem;
+}
+
+a {
+  color: inherit;
 }

@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vagas</title>
 
-    <link rel="stylesheet" href="./../assets/css/reset.css">
-    <link rel="stylesheet" href="./../assets/css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vagas</title>
+
+  <link rel="stylesheet" href="./../assets/css/reset.css">
+  <link rel="stylesheet" href="./../assets/css/style.css">
 </head>
+
 <body>
 
   <header class="header row space-between">
-    <img src="./../assets/img/icons/menu.svg" alt="Ícone de menu.">
-    <img class="header--profile-picture" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+    <a class="self-center" href="./../pages/menu.html">
+      <img src="./../assets/img/icons/menu.svg" alt="Ícone de menu.">
+    </a>
+    <a href="./../pages/perfil.html">
+      <img class="header--profile-picture" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+    </a>
   </header>
+  <main>
+    <div class="page-heading">
+      <h1 class="page-title">Vagas</h1>
+    </div>
 
-    <main>
-      <div class="page-heading">
-        <h1 class="page-title">Vagas</h1>
-      </div>
+    <input class="input" type="text" placeholder="Busque por uma vaga...">
 
-        <ul class="row">
-          <li><button class="filter-badge">JavaScript</button></li>
-          <li><button class="filter-badge">Python</button></li>
-          <li><button class="filter-badge">Machine Learning</button></li>
-        </ul>
+    <ul class="row">
+      <li><button class="filter-badge">JavaScript</button></li>
+      <li><button class="filter-badge">Python</button></li>
+      <li><button class="filter-badge">Machine Learning</button></li>
+    </ul>
 
-        <ul>
-          <li class="job-card row">
-              <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
-              <div class="column space-between">
-                  <h3>Desenvolvimento de Software</h3>
-                  <p>Giant Steps Capital</p>
-                  <p>Faria Lima, São Paulo</p>
-              </div>
-          </li>
-
-          <li class="job-card row">
-              <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
-              <div class="column space-between">
-                  <h3 class="semi-bold larger">Desenvolvimento de Software</h3>
-                  <p class="medium gray">Giant Steps Capital</p>
-                  <p class="regular gray">Faria Lima, São Paulo</p>
-              </div>
-          </li>
-
-          <li class="job-card row">
-            <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
-            <div class="column space-between">
-                <h3 class="semi-bold larger">Desenvolvimento de Software</h3>
-                <p class="medium gray">Giant Steps Capital</p>
-                <p class="regular gray">Faria Lima, São Paulo</p>
-            </div>
-        </li>
-
-        <li class="job-card row">
+    <ul>
+      <li class="job-card">
+        <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
-              <h3 class="semi-bold larger">Desenvolvimento de Software</h3>
-              <p class="medium gray">Giant Steps Capital</p>
-              <p class="regular gray">Faria Lima, São Paulo</p>
+            <h3>Desenvolvimento de Software</h3>
+            <p>Giant Steps Capital</p>
+            <p>Faria Lima, São Paulo</p>
           </div>
+        </a>
       </li>
-      </ul>
 
-    </main>
+      <li class="job-card">
+        <a href="./../pages/vaga.html" class="row">
+          <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
+          <div class="column space-between">
+            <h3>Desenvolvimento de Software</h3>
+            <p>Giant Steps Capital</p>
+            <p>Faria Lima, São Paulo</p>
+          </div>
+        </a>
+      </li>
+
+      <li class="job-card">
+        <a href="./../pages/vaga.html" class="row">
+          <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
+          <div class="column space-between">
+            <h3>Desenvolvimento de Software</h3>
+            <p>Giant Steps Capital</p>
+            <p>Faria Lima, São Paulo</p>
+          </div>
+        </a>
+      </li>
+
+      <li class="job-card">
+        <a href="./../pages/vaga.html" class="row">
+          <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
+          <div class="column space-between">
+            <h3>Desenvolvimento de Software</h3>
+            <p>Giant Steps Capital</p>
+            <p>Faria Lima, São Paulo</p>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+
+  </main>
 
 
 
 </body>
+
 </html>

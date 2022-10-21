@@ -59,6 +59,6 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 a, a:link, a:hover {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: inherit;
 }
