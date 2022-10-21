@@ -12,7 +12,7 @@ body {
   background-color: #fbfafa;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-  
+
 /* General styles for <main /> */
 main {
   padding: 0 1rem;
@@ -187,18 +187,19 @@ main {
   border-radius: 50%;
 }
 
-.user_name{
+.user_name {
   font-size: 1.5rem;
-  margin-top:0.75rem;
-  margin-bottom:0.75rem;
-  font-weight: 600;}
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
 
 /* Menu compositions */
 
 .navbar {
-  position:fixed;
-  left:0;
-  top:0;
+  position: fixed;
+  left: 0;
+  top: 0;
   margin-top: 1.5rem;
   margin-left: 1rem;
   height: 100vh;
@@ -223,44 +224,44 @@ main {
 }
 
 
-.cand-titulo{
+.cand-titulo {
   margin-bottom: 2rem;
   font-weight: 600;
 
 }
 
-.h1-cand{
+.h1-cand {
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.h2-cand{
+.h2-cand {
   font-size: 1rem;
 }
 
 
-.cand-steps{
+.cand-steps {
   font-size: 1rem;
   margin-left: 1rem;
-  margin-bottom:2rem;
-  font-weight:400;
+  margin-bottom: 2rem;
+  font-weight: 400;
   align-items: center;
 
 }
 
-.cand-check{
+.cand-check {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   justify-content: center;
 }
 
-.icone{
+.icone {
   margin-right: 0.5rem;
 }
-.cand-write{
-  padding-left: 0.5rem
 
+.cand-write {
+  padding-left: 0.5rem
 }
 
 .listing-header {
