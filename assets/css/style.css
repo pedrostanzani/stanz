@@ -176,6 +176,11 @@ main {
   margin-right: 0.25rem;
 }
 
+.filter-badge-active {
+  color: #FFF;
+  background-color: #3263E9;
+}
+
 
 .profile-header {
   display: flex;

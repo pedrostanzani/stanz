@@ -9,10 +9,11 @@
 
   <link rel="stylesheet" href="./../assets/css/reset.css">
   <link rel="stylesheet" href="./../assets/css/style.css">
+
+  <script src="./../assets/js/index.js"></script>
 </head>
 
 <body>
-
   <header class="header row space-between">
     <a class="self-center" href="./../pages/menu.html">
       <img src="./../assets/img/icons/menu.svg" alt="Ícone de menu.">
@@ -26,7 +27,7 @@
       <h1 class="page-title">Vagas</h1>
     </div>
 
-    <input class="input" type="text" placeholder="Busque por uma vaga...">
+    <input id="job-search-input" class="input" type="text" placeholder="Busque por uma vaga...">
 
     <ul class="row">
       <li><button class="filter-badge">JavaScript</button></li>
@@ -34,13 +35,13 @@
       <li><button class="filter-badge">Machine Learning</button></li>
     </ul>
 
-    <ul>
+    <ul id="job-listings">
       <li class="job-card">
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
-            <h3>Desenvolvimento de Software</h3>
-            <p>Giant Steps Capital</p>
+            <h3 class="job-title">Publicidade e Marketing</h3>
+            <p class="company-name">XP inc.</p>
             <p>Faria Lima, São Paulo</p>
           </div>
         </a>
@@ -50,8 +51,8 @@
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
-            <h3>Desenvolvimento de Software</h3>
-            <p>Giant Steps Capital</p>
+            <h3 class="job-title">Desenvolvimento de Software</h3>
+            <p class="company-name">Giant Steps Capital</p>
             <p>Faria Lima, São Paulo</p>
           </div>
         </a>
@@ -61,8 +62,8 @@
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
-            <h3>Desenvolvimento de Software</h3>
-            <p>Giant Steps Capital</p>
+            <h3 class="job-title">Back Office</h3>
+            <p class="company-name">BTG Pactual</p>
             <p>Faria Lima, São Paulo</p>
           </div>
         </a>
@@ -72,8 +73,8 @@
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
-            <h3>Desenvolvimento de Software</h3>
-            <p>Giant Steps Capital</p>
+            <h3 class="job-title">Desenvolvimento de Jogos</h3>
+            <p class="company-name">Wildlife Studios</p>
             <p>Faria Lima, São Paulo</p>
           </div>
         </a>
