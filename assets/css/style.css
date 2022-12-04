@@ -307,3 +307,7 @@ main {
 a {
   color: inherit;
 }
+
+#close-menu:hover {
+  cursor: pointer;
+}
