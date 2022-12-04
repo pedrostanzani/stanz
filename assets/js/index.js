@@ -1,29 +1,3 @@
-const jobSearchFilter = () => {
-  const searchInput = document.querySelector('#job-search-input');
-  const unorderedList = document.querySelector('#job-listings');
-
-  if (searchInput && unorderedList) {
-    const listItems = Array.from(unorderedList.querySelectorAll('li')).map(item => {
-      const jobTitle = item.querySelector('.job-title').innerText;
-      const companyName = item.querySelector('.company-name').innerText;
-      const query = jobTitle + ' ' + companyName;
-  
-      return {
-        query: query.toLowerCase(),
-        item: item
-      };
-    })
-  
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
-      const filteredItems = listItems.filter(item => {
-        return item.query.includes(query);
-      })
-      unorderedList.replaceChildren(...filteredItems.map(i => i.item));
-    })
-  }
-}
-
 const updateJobsDisplay = (filterTags, jobs) => {
   const unorderedList = document.querySelector('#job-listings');
 
@@ -53,11 +27,51 @@ const updateJobsDisplay = (filterTags, jobs) => {
   unorderedList.replaceChildren(...jobMatches);
 }
 
-const activeFilterButtons = () => {
+const searchFilters = () => {
+  let filterJobsByTags = []; // lift state up!
+
+  jobSearchFilter(filterJobsByTags);
+  activeFilterButtons(filterJobsByTags);
+}
+
+const jobSearchFilter = (filterJobsByTags) => {
+  const searchInput = document.querySelector('#job-search-input');
+  const unorderedList = document.querySelector('#job-listings');
   const jobListings = document.querySelectorAll('.jobs--job-card');
   const buttons = document.querySelectorAll('.filter-badge');
 
-  let filterJobsByTags = [];
+  if (searchInput && unorderedList) {
+    const listItems = Array.from(unorderedList.querySelectorAll('li')).map(item => {
+      const jobTitle = item.querySelector('.job-title').innerText;
+      const companyName = item.querySelector('.company-name').innerText;
+      const query = jobTitle + ' ' + companyName;
+  
+      return {
+        query: query.toLowerCase(),
+        item: item
+      };
+    })
+  
+    searchInput.addEventListener('input', () => {
+      filterJobsByTags = [];
+      updateJobsDisplay(filterJobsByTags, jobListings);
+
+      buttons.forEach(btn => {
+        btn.classList.remove('filter-badge-active');
+      })
+
+      const query = searchInput.value.toLowerCase();
+      const filteredItems = listItems.filter(item => {
+        return item.query.includes(query);
+      })
+      unorderedList.replaceChildren(...filteredItems.map(i => i.item));
+    })
+  }
+}
+
+const activeFilterButtons = (filterJobsByTags) => {
+  const jobListings = document.querySelectorAll('.jobs--job-card');
+  const buttons = document.querySelectorAll('.filter-badge');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -137,8 +151,9 @@ const loadProfileData = () => {
 
 // Main script execution
 addEventListener('DOMContentLoaded', () => {
-  jobSearchFilter();
-  activeFilterButtons();
+  searchFilters();
+  // jobSearchFilter();
+  // activeFilterButtons();
   goBack();
   handleEditFormSubmission();
   loadProfileData();
