@@ -41,6 +41,10 @@ main {
   margin-right: 1rem;
 }
 
+.mt-1 {
+  margin-top: 1.5rem;
+}
+
 .page-heading {
   margin: 2rem 0;
 }
@@ -158,7 +162,7 @@ main {
   color: #111827;
   background-color: #FFF;
   box-sizing: border-box;
-  border: none;
+  border: 2px solid #3263E9;
   border-radius: 1rem;
   font-size: inherit;
   padding: 0.75rem;
@@ -311,3 +315,70 @@ a {
 #close-menu:hover {
   cursor: pointer;
 }
+
+.edit-prompt {
+  margin-bottom: 0.5rem;
+  color:#3263E9;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+.edit-wrapper:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.edit-icon {
+  width: 0.75rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset-select {
+  margin: 0.75rem 0;
+}
+
+.select {
+  color: #111827;
+  background-color: #FFF;
+  box-sizing: border-box;
+  border: 2px solid #3263E9;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  font-size: inherit;
+  width: 100%;
+}
+
+.form--labels {
+  margin: 1rem 0;
+}
+
+/*
+
+.input {
+  color: #111827;
+  background-color: #FFF;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1rem;
+  font-size: inherit;
+  padding: 0.75rem;
+  width: 100%;
+
+  margin-bottom: 0.75rem;
+}
+
+*/

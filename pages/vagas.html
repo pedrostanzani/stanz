@@ -30,13 +30,13 @@
     <input id="job-search-input" class="input" type="text" placeholder="Busque por uma vaga...">
 
     <ul class="row">
-      <li><button class="filter-badge">JavaScript</button></li>
-      <li><button class="filter-badge">Python</button></li>
-      <li><button class="filter-badge">Machine Learning</button></li>
+      <li><button class="filter-badge" data-tag="js">JavaScript</button></li>
+      <li><button class="filter-badge" data-tag="python">Python</button></li>
+      <li><button class="filter-badge" data-tag="ml">Machine Learning</button></li>
     </ul>
 
     <ul id="job-listings">
-      <li class="job-card">
+      <li class="job-card jobs--job-card" data-tags="python ml">
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
@@ -47,7 +47,7 @@
         </a>
       </li>
 
-      <li class="job-card">
+      <li class="job-card jobs--job-card" data-tags="python">
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
@@ -58,7 +58,7 @@
         </a>
       </li>
 
-      <li class="job-card">
+      <li class="job-card jobs--job-card" data-tags="ml">
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">
@@ -69,7 +69,7 @@
         </a>
       </li>
 
-      <li class="job-card">
+      <li class="job-card jobs--job-card" data-tags="">
         <a href="./../pages/vaga.html" class="row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
           <div class="column space-between">

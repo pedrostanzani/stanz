@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Meu Perfil | Fulano DeTal</title>
   <link rel="stylesheet" href="./../assets/css/reset.css">
   <link rel="stylesheet" href="./../assets/css/style.css">
+
+  <script src="./../assets/js/index.js"></script>
 </head>
 
 <body>
@@ -19,16 +21,21 @@
 
     <div class="profile-header column">
       <img class="profile-header-picture" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
-      <h1 class="user_name">Pedro Stanzani</h1>
+      <h1 class="user_name">Fulano DeTal</h1>
+    </div>
+    <div class="edit-prompt">
+      <a href="./editar.html" class="edit-wrapper">
+        <img class="edit-icon" src="./../assets/img/icons/editButton.svg" alt="Edit icon.">
+        <p>Editar perfil</p>
+      </a>
     </div>
     <section class="section">
       <h2 class="section-heading">Educação</h2>
       <ul>
         <li class="job-card bg-gray row">
           <img class="logo" src="./../assets/img/companyLogo.png" alt="Logo da empresa.">
-          <div class="column space-between">
-            <h3>Insper Instituto de Ensino e Pesquisa</h3>
-            <p>Giant Steps Capital</p>
+          <div class="column gap-1">
+            <h3 id="profile--university-name">Insper Instituto de Ensino e Pesquisa</h3>
             <p>Faria Lima, São Paulo</p>
           </div>
         </li>
@@ -38,7 +45,7 @@
       <ul>
         <li>
           <h2 class="section-heading">Linkedin</h2>
-          <a class="btn anchor" href="https://linkedin.com/in/pedrostanzani">
+          <a id="profile--linkedin-link" class="btn anchor" href="https://linkedin.com/in/pedrostanzani">
             <span>Acessar</span>
             <img src="./../assets/img/icons/arrow.svg" alt="Arrow icon.">
           </a>

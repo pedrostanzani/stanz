@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil | Fulano DeTal</title>
+  <link rel="stylesheet" href="./../assets/css/reset.css">
+  <link rel="stylesheet" href="./../assets/css/style.css">
+
+  <script src="./../assets/js/index.js"></script>
+</head>
+
+<body>
+  <header class="header row space-between">
+    <a class="self-center" href="./../pages/menu.html">
+      <img src="./../assets/img/icons/menu.svg" alt="Ícone de menu.">
+    </a>
+  </header>
+  <main class="column">
+
+    <div class="profile-header column">
+      <img class="profile-header-picture" src="./../assets/img/profilePicture.png" alt="Foto de perfil do usuário.">
+      <h1 class="user_name">Fulano DeTal</h1>
+    </div>
+
+    <form id="edit-form">
+      <fieldset class="fieldset fieldset-select">
+        <label class="form--labels" for="cars">Universidade:</label>
+        <select class="select" id="form-select-univeristy">
+          <option value="insper">Insper</option>
+          <option value="fgv">FGV</option>
+          <option value="usp">USP</option>
+          <option value="mack">Mackenzie</option>
+        </select>
+      </fieldset>
+
+
+      <fieldset class="fieldset">
+        <label class="form--labels" for="fname">Username do LinkedIn:</label>
+        <input id="edit-form--linkedin" class="input" type="text">
+      </fieldset>
+
+      <a id="form-submit" class="btn anchor" href="#">
+        <span>Salvar alterações</span>
+        <img src="./../assets/img/icons/arrow.svg" alt="Arrow icon.">
+      </a>
+    </form>
+    
+  </main>
+</body>
+
+</html>
