@@ -1,95 +1,25 @@
-const updateJobsDisplay = (filterTags, jobs) => {
-  const unorderedList = document.querySelector('#job-listings');
-
-  if (filterTags.length === 0) {
-    unorderedList.replaceChildren(...jobs);
-    return;
-  }
-
-  const jobMatches = Array.from(jobs).filter(job => {
-    const tags = job.getAttribute('data-tags');
-    for (let i = 0; i < filterTags.length; i++) {
-      const tag = filterTags[i];
-      if (tags.includes(tag)) { return true; }
-    }
-    return false;
-  });
-
-  if (jobMatches.length === 0) {
-    const NotFound = document.createElement('li');
-    const pTag = document.createElement('p');
-    pTag.textContent = 'Nenhuma vaga satisfaz os filtros inseridos!';
-    NotFound.appendChild(pTag);
-    NotFound.classList.add('mt-1');
-    unorderedList.replaceChildren(NotFound);
-    return;
-  }
-  unorderedList.replaceChildren(...jobMatches);
-}
-
-const searchFilters = () => {
-  let filterJobsByTags = []; // lift state up!
-
-  jobSearchFilter(filterJobsByTags);
-  activeFilterButtons(filterJobsByTags);
-}
-
-const jobSearchFilter = (filterJobsByTags) => {
-  const searchInput = document.querySelector('#job-search-input');
-  const unorderedList = document.querySelector('#job-listings');
-  const jobListings = document.querySelectorAll('.jobs--job-card');
-  const buttons = document.querySelectorAll('.filter-badge');
-
-  if (searchInput && unorderedList) {
-    const listItems = Array.from(unorderedList.querySelectorAll('li')).map(item => {
-      const jobTitle = item.querySelector('.job-title').innerText;
-      const companyName = item.querySelector('.company-name').innerText;
-      const query = jobTitle + ' ' + companyName;
-  
-      return {
-        query: query.toLowerCase(),
-        item: item
-      };
-    })
-  
-    searchInput.addEventListener('input', () => {
-      filterJobsByTags = [];
-      updateJobsDisplay(filterJobsByTags, jobListings);
-
-      buttons.forEach(btn => {
-        btn.classList.remove('filter-badge-active');
-      })
-
-      const query = searchInput.value.toLowerCase();
-      const filteredItems = listItems.filter(item => {
-        return item.query.includes(query);
-      })
-      unorderedList.replaceChildren(...filteredItems.map(i => i.item));
-    })
-  }
-}
-
-const activeFilterButtons = (filterJobsByTags) => {
-  const jobListings = document.querySelectorAll('.jobs--job-card');
+const activeFilterButtons = (onFilter) => {
   const buttons = document.querySelectorAll('.filter-badge');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
-      const isActive = Array
-        .from(button.classList)
-        .includes('filter-badge-active');
+      const isActive = Array.from(button.classList).includes('filter-badge-active');
+      if (isActive) { button.classList.remove('filter-badge-active'); } 
+      else { button.classList.add('filter-badge-active');}
 
-      if (isActive) {
-        button.classList.remove('filter-badge-active');
-        filterJobsByTags = filterJobsByTags.filter(n => n !== button.getAttribute('data-tag'));
-      } else {
-        button.classList.add('filter-badge-active');
-        filterJobsByTags.push(button.getAttribute('data-tag'));
-      }
-
-      updateJobsDisplay(filterJobsByTags, jobListings);
+      onFilter();
     })
   })
+}
+
+const jobSearchFilter = (onFilter) => {
+  const searchInput = document.querySelector('#job-search-input');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      onFilter();
+    })
+  }
 }
 
 const goBack = () => {
@@ -151,9 +81,52 @@ const loadProfileData = () => {
 
 // Main script execution
 addEventListener('DOMContentLoaded', () => {
-  searchFilters();
-  // jobSearchFilter();
-  // activeFilterButtons();
+  const unorderedList = document.querySelector('#job-listings');
+  let listItems;
+
+  if (unorderedList) {
+    listItems = Array.from(unorderedList.querySelectorAll('li')).map(item => {
+      const jobTitle = item.querySelector('.job-title').innerText;
+      const companyName = item.querySelector('.company-name').innerText;
+      const query = jobTitle + ' ' + companyName;
+  
+      const dataTags = item.getAttribute('data-tags');
+  
+      return {
+        query: query.toLowerCase(),
+        tags: dataTags,
+        item: item
+      };
+    });
+  }
+
+  const handleApplyFilter = () => {
+    const searchInput = document.querySelector('#job-search-input');
+    const buttons = document.querySelectorAll('.filter-badge');
+    const selectedDataTags = Array
+      .from(buttons)
+      .filter(btn => [...btn.classList].includes('filter-badge-active'))
+      .map(btn => btn.getAttribute('data-tag'));
+
+    const filterApplied = listItems.filter(item => {
+      const matchesQuery = item.query.includes(searchInput.value.toLowerCase());
+      let matchesTags = true;
+      if (selectedDataTags.length > 0) {
+        matchesTags = false;
+        selectedDataTags.forEach(tag => {
+          if (item.tags.includes(tag)) {
+            matchesTags = true;
+          }
+        })
+      }
+      return matchesTags && matchesQuery;
+    })
+
+    unorderedList.replaceChildren(...filterApplied.map(i => i.item));
+  }
+
+  jobSearchFilter(handleApplyFilter);
+  activeFilterButtons(handleApplyFilter);
   goBack();
   handleEditFormSubmission();
   loadProfileData();
