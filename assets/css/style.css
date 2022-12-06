@@ -366,6 +366,15 @@ a {
   margin: 1rem 0;
 }
 
+.listing--go-back {
+  margin-bottom: 1rem;
+  color: #3263E9;
+}
+
+.listing--go-back:hover {
+  text-decoration: underline;
+}
+
 /*
 
 .input {
