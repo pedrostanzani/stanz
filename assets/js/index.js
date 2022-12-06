@@ -44,7 +44,7 @@ const handleEditFormSubmission = () => {
     window.localStorage.setItem('university', university);
     window.localStorage.setItem('linkedin', LinkedIn);
 
-    window.location.href = '/pages/perfil.html';
+    window.location.href = 'stanz/pages/perfil.html';
   })
 }
 
