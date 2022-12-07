@@ -36,19 +36,33 @@ const handleEditFormSubmission = () => {
   const submitButton = document.querySelector('#form-submit');
   if (!submitButton) { return ; }
 
+  const biography = document.querySelector('#edit-form--biography');
+  const university = document.querySelector('#form-select-univeristy');
+  const LinkedIn = document.querySelector('#edit-form--linkedin');
+
+  // Pre-load with set variables
+  // const storageName = window.localStorage.getItem('university');
+  const storageLinkedIn = window.localStorage.getItem('linkedin');
+  const storageBio = window.localStorage.getItem('biography');
+
+  if (storageLinkedIn) { LinkedIn.value = storageLinkedIn }
+  else { LinkedIn.value = 'pedrostanzani' }
+
+  if (storageBio) { biography.value = storageBio }
+  else { biography.value = "Sou estudante de Engenharia da Computação, atualmente no segundo período da faculdade. Sei programar em Python e Haskell e busco uma oportunidade de estágio no mercado financeiro." }
+
   submitButton.addEventListener('click', () => {
 
-    const university = document.querySelector('#form-select-univeristy').value;
-    const LinkedIn = document.querySelector('#edit-form--linkedin').value;
+    window.localStorage.setItem('biography', biography.value);
+    window.localStorage.setItem('university', university.value);
+    window.localStorage.setItem('linkedin', LinkedIn.value);
 
-    window.localStorage.setItem('university', university);
-    window.localStorage.setItem('linkedin', LinkedIn);
-
-    window.location.href = 'stanz/pages/perfil.html';
+    window.location.href = 'perfil.html';
   })
 }
 
 const loadProfileData = () => {
+  const bioParagraph   = document.querySelector('#profile--biography');
   const universityName = document.querySelector('#profile--university-name');
   const linkedinAnchor = document.querySelector('#profile--linkedin-link');
 
@@ -75,6 +89,12 @@ const loadProfileData = () => {
   const storageLinkedIn = window.localStorage.getItem('linkedin');
   if (storageLinkedIn) {
     linkedinAnchor.setAttribute('href', 'https://linkedin.com/in/' + storageLinkedIn)
+  }
+
+  // Set biography paragraph
+  const storageBio = window.localStorage.getItem('biography');
+  if (storageBio) {
+    bioParagraph.textContent = storageBio;
   }
 
 }
