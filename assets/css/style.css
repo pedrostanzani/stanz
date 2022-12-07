@@ -375,6 +375,10 @@ a {
   text-decoration: underline;
 }
 
+.listing-description {
+  line-height: 1.5;
+}
+
 /*
 
 .input {
