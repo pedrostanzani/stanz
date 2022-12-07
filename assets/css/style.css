@@ -379,6 +379,10 @@ a {
   line-height: 1.5;
 }
 
+.sent {
+  background-color: #28965A;
+}
+
 /*
 
 .input {

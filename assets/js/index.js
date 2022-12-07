@@ -99,6 +99,20 @@ const loadProfileData = () => {
 
 }
 
+const sendJobApplication = () => {
+  const applicationButton = document.querySelector('#applicationButton');
+
+  if (!applicationButton) { return; }
+
+  applicationButton.addEventListener('click', () => {
+    applicationButton.classList.add('sent');
+    applicationButton.innerHTML = `
+        <span>Currículo enviado!</span>
+        <img src="./../../assets/img/icons/whiteCheck.svg" alt="Checkmark icon.">
+    `
+  })
+}
+
 // Main script execution
 addEventListener('DOMContentLoaded', () => {
   const unorderedList = document.querySelector('#job-listings');
@@ -150,4 +164,5 @@ addEventListener('DOMContentLoaded', () => {
   goBack();
   handleEditFormSubmission();
   loadProfileData();
+  sendJobApplication();
 })
